@@ -1,0 +1,22 @@
+docker build --tag weather-backend-image .
+docker run --publish 8000:8000 weather-backend-image
+
+docker build --tag weather-frontend-image .
+docker run --publish 3000:3000 weather-frontend-image
+
+docker-compose run web django-admin
+
+docker-compose run web python manage.py migrate
+
+docker-compose build
+docker-compose run ...
+docker-compose up
+
+docker exec -it weather-frontend-container /bin/bash
+
+# Unit test
+python -m unittest 
+
+# Fixture
+python manage.py dumpdata api.weatherentry > api/fixtures/weather_entry.json
+python manage.py loaddata weather_entry
