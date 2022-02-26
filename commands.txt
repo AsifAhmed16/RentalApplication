@@ -1,22 +1,19 @@
-docker build --tag weather-backend-image .
-docker run --publish 8000:8000 weather-backend-image
+# Backend commands used:
 
-docker build --tag weather-frontend-image .
-docker run --publish 3000:3000 weather-frontend-image
+    pip freeze > requirements.txt
+    pip install -r requirements.txt
 
-docker-compose run web django-admin
+    python manage.py makemigrations
+    python manage.py migrate
+    python manage.py loaddata products
+    python manage.py runserver 0.0.0.0:8000
 
-docker-compose run web python manage.py migrate
 
-docker-compose build
-docker-compose run ...
-docker-compose up
 
-docker exec -it weather-frontend-container /bin/bash
+# Frontend commands used:
 
-# Unit test
-python -m unittest 
-
-# Fixture
-python manage.py dumpdata api.weatherentry > api/fixtures/weather_entry.json
-python manage.py loaddata weather_entry
+npm i axios react-redux redux redux-logger redux-thunk redux-devtools-extension @material-ui/core @mui/core
+npm install @emotion/styled @emotion/react query-string
+npm i --save material-ui-search-bar
+npm install @mui/styles
+Default port - localhost:3000
