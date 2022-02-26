@@ -80,7 +80,7 @@ WSGI_APPLICATION = 'rental_backend.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'rental_db',
+        'NAME': 'rental_app_db',
         'USER': 'postgres',
         'PASSWORD': 'root1234',
         'HOST': 'localhost',
@@ -134,5 +134,6 @@ REST_FRAMEWORK = {
 }
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000"
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
 ]

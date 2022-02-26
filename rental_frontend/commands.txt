@@ -1,0 +1,9 @@
+python manage.py loaddata products
+
+npm i axios react-redux redux redux-logger redux-thunk redux-devtools-extension @material-ui/core @mui/core
+
+npm install @emotion/styled @emotion/react query-string
+
+npm i --save material-ui-search-bar
+
+npm install @mui/styles

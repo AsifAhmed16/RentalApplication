@@ -1,0 +1,12 @@
+python manage.py loaddata products
+
+npm i axios react-redux redux redux-logger redux-thunk redux-devtools-extension @material-ui/core @mui/core
+
+npm install @emotion/styled @emotion/react query-string
+
+npm i --save material-ui-search-bar
+
+    "@emotion/react": "^11.8.1",
+    "@emotion/styled": "^11.8.1",
+    "@mui/core": "^5.0.0-alpha.54",
+    "@mui/material": "^5.4.2",
