@@ -12,7 +12,7 @@ Step 3:
     Create a database named : rental_app_db
 
 Step 4:
-    type these instructions in terminal:
+    Type these instructions in-order into terminal:
 
     1. python manage.py makemigrations
     2. python manage.py migrate
