@@ -14,6 +14,7 @@ const productsReducers = (state = initialState, action) => {
         case types.GET_PRODUCTS:
             return {
                 ...state,
+                product: {},
                 products: action.payload,
                 loading: false,
             }
@@ -24,6 +25,7 @@ const productsReducers = (state = initialState, action) => {
         case types.RETURN_PRODUCT:
             return {
                 ...state,
+                product: {},
                 loading: false,
             }
         case types.GET_SINGLE_PRODUCT:

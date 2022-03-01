@@ -54,10 +54,12 @@ const ProductEdit = () => {
 
     useEffect(() => {
         dispatch(loadSingleProduct(id));
+        return () => {}
     }, []);
 
     useEffect(() => {
         if(product){
+            console.log(product);
             setState({ ...product });
         }
     }, [product]);
@@ -72,8 +74,8 @@ const ProductEdit = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        if(!name || !code || !type || !mileage || !durability || !max_durability || !price || !minimum_rent_period){
-            setError("Please fill all the input fields.");
+        if(!name || !code || !type || !mileage || !price){
+            setError("Please fill all the required input fields(name, code, type, mileage, price).");
         } else {
             dispatch(editProduct(id, state));
             navigate("/product/");

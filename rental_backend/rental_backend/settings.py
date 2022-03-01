@@ -80,7 +80,7 @@ WSGI_APPLICATION = 'rental_backend.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'rental_app_db',
+        'NAME': 'rent_db',
         'USER': 'postgres',
         'PASSWORD': 'root1234',
         'HOST': 'localhost',

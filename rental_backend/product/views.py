@@ -14,7 +14,7 @@ from .serializers import *
 class ProductListView(APIView):
     def get(self, *args, **kwargs):
         try:
-            snippet = Product.objects.all()
+            snippet = Product.objects.all().order_by('id')
             serializer = ProductSerializer(snippet, many=True)
             return Response(serializer.data, status=status.HTTP_200_OK)
         except Exception as exc:
@@ -57,7 +57,7 @@ class ProductUpdateView(APIView):
     def put(self, *args, **kwargs):
         try:
             snippet = get_object_or_404(Product, id=kwargs['product_id'])
-            serializer = ProductSerializer(snippet, data=self.request.data, partial=True)
+            serializer = ProductSerializer(snippet, data=self.request.data)
             if serializer.is_valid():
                 serializer.save()
                 return Response(serializer.data, status=status.HTTP_201_CREATED)
